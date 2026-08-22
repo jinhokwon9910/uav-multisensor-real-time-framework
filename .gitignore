@@ -1,0 +1,69 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+MemoryCaptures/
+Recordings/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.userprefs
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# ROS 2 / colcon
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Data and generated outputs
+data/raw/
+datasets/
+scenario*/
+runs/
+outputs/
+results/
+*.cache
+*.npy
+*.npz
+*.mat
+*.ply
+*.bag
+*.db3
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Local configuration
+.env
+.env.*
+config/local*.yaml
+config/local*.json
+
+# OS files
+.DS_Store
+Thumbs.db
