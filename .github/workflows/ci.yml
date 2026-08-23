@@ -1,0 +1,47 @@
+name: Portfolio evidence checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python sources
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import py_compile
+
+          roots = (
+              Path("ros2_ws/src/beam_estimator"),
+              Path("tests"),
+              Path("runtime/windows_conda"),
+          )
+          files = sorted(path for root in roots for path in root.rglob("*.py"))
+          for path in files:
+              py_compile.compile(str(path), doraise=True)
+          print(f"py_compile OK: {len(files)} files")
+          PY
+
+      - name: Verify the recorded ROS-to-C# contract
+        run: python tests/test_interface_contract.py
+
+      - name: Verify the recorded worker protocol
+        run: python runtime/windows_conda/test_protocol.py

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "reason": "completed",
+  "scope": "Unity-ROS 2-Python sensor-frame roundtrip",
+  "scene": "private_demo_scene",
+  "unity": {
+    "version": "6000.0.44f1",
+    "executionMode": "editor_play_mode"
+  },
+  "ros": {
+    "operatingSystem": "Ubuntu 24.04 under WSL",
+    "distribution": "ROS 2 Jazzy",
+    "rmwImplementation": "rmw_fastrtps_cpp"
+  },
+  "detectorBackend": "windows_conda_ultralytics",
+  "modelArtifact": {
+    "fileName": "best.pt",
+    "includedInRepository": false
+  },
+  "expectedResponses": 3,
+  "successfulResponses": 3,
+  "lastPublishedSequence": 4,
+  "lastAcceptedSequence": 4,
+  "lastRoundTripMs": 170.6985,
+  "lastPythonProcessingMs": 108.9378,
+  "single_smoke_run": true,
+  "recordedUtc": "2026-08-23T07:27:31.1092084Z"
+}

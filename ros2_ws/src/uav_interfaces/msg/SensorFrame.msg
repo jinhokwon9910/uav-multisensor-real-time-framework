@@ -1,0 +1,6 @@
+std_msgs/Header header
+uint32 sequence
+sensor_msgs/CompressedImage camera_image
+geometry_msgs/Quaternion uav_orientation_noisy
+geometry_msgs/Quaternion camera_orientation_local
+float32 vertical_fov_deg

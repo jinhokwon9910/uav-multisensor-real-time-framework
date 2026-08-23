@@ -37,6 +37,9 @@ ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
 
+# Dependencies restored from pinned manifests
+/ros2_ws/src/ros_tcp_endpoint/
+
 # Data and generated outputs
 data/raw/
 datasets/
@@ -47,22 +50,44 @@ results/
 *.cache
 *.npy
 *.npz
-*.mat
 *.ply
 *.bag
 *.db3
+*.mcap
 
 # Model weights
 *.pt
 *.pth
 *.onnx
 *.engine
+*.ckpt
+*.safetensors
+*.weights
+*.tflite
+*.pb
+*.h5
+**/weights/
+/models/
 
 # Local configuration
 .env
 .env.*
+runtime.env
+!.env.example
 config/local*.yaml
 config/local*.json
+
+# Private proof inputs and third-party Unity content
+/docs/evidence/raw/
+/unity/Assets/Private/
+/unity/Assets/ThirdParty/
+*.unitypackage
+
+# Local-only study, orchestration, and exploratory code
+/further_work/
+/runtime/windows_conda/run_ros_runtime.sh
+/runtime/windows_conda/runtime.env.example
+/runtime/windows_conda/ros_tcp_endpoint_clean.py
 
 # OS files
 .DS_Store
