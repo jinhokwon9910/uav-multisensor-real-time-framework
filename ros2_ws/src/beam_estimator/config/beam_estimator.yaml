@@ -1,0 +1,9 @@
+beam_estimator:
+  ros__parameters:
+    sensor_topic: /unity/sensor_frame
+    estimate_topic: /beam/direction_estimate
+    detector_backend: center
+    model_path: ""
+    image_size: 960
+    confidence_threshold: 0.01
+    device: auto
