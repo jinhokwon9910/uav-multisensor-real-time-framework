@@ -4,6 +4,18 @@ Unity에서 생성한 UAV Camera·state를 ROS 2로 전달하고, Python에서 �
 
 ICTC 2025 제1저자 논문 *A Multi-Modal Simulator for Aerial Communication with Applications to Beam Search*에서 구축한 Unity–Python 시뮬레이션을 ROS 2 기반 양방향 구조로 확장했습니다.
 
+## Demo
+
+### Unity 시뮬레이션과 YOLO 기지국 검출
+
+Unity에서 생성한 UAV camera frame과 YOLO 기반 기지국(`BS`) 검출 결과입니다.
+
+![Unity UAV simulation and YOLO base-station detection](docs/media/yolo-bs-detection.png)
+
+### 시뮬레이터 테스트 영상
+
+[▶ Simulator test video 보기 (MP4, 5.5 MB)](docs/media/simulator-test-video.mp4)
+
 ## Data Flow
 
 ```text
@@ -69,4 +81,3 @@ docs/evidence/                    # sanitized smoke-run evidence
 ## Public Scope
 
 저장소에는 직접 작성한 integration code와 공개 가능한 message contract·검증 자료만 포함합니다. Third-party Unity asset, dataset, trained weight, 개인 실행 경로는 제외했습니다. 현재 공개 경로의 반환값은 Unity 시각화에 사용하며 UAV actuator에는 적용하지 않습니다.
-
