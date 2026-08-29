@@ -2,7 +2,7 @@
 
 Unity에서 생성한 UAV Camera·state를 ROS 2로 전달하고, Python에서 계산한 빔 방향 결과를 원본 frame과 대응시켜 Unity에 반환하는 online framework입니다.
 
-ICTC 2025 제1저자 논문 *A Multi-Modal Simulator for Aerial Communication with Applications to Beam Search*에서 구축한 Unity–Python 시뮬레이션을 ROS 2 기반 양방향 구조로 확장했습니다.
+ICTC 2025 제1저자 논문 *A Multi-Modal Simulator for Aerial Communication with Applications to Beam Search*에서 구축한 Unity–Python 시뮬레이션을 ROS 2 기반 real-time feedback 구조로 확장했습니다.
 
 ## Data Flow
 
